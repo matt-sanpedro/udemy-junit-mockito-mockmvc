@@ -1,0 +1,16 @@
+# COURSE ROAD MAP #
+1. JUnit review
+2. Spring Boot Mocks with Mockito
+3. Spring Boot Testing Spring MVC Web App
+4. Spring Boot Testing Spring REST APIs
+
+# PREREQUISITES #
+1. Java
+2. Spring Boot
+3. Maven
+
+# DEVELOPMENT ENVIRONMENT #
+1. IDE
+2. MySQL Database Server
+3. MySQL Workbench
+
