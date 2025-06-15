@@ -14,3 +14,30 @@
 2. MySQL Database Server
 3. MySQL Workbench
 
+# UNIT TESTING OVERVIEW #
+Definition:
+- test individual unit of code for correctness
+- fixed inputs and expected known output
+
+# INTEGRATION TESTING #
+- test multiple components together
+- determine if software units work together as expected
+- identify negative side effects due to integration
+- can test with mocks / stubs
+- can test live integrations (database, file system)
+
+# UNIT TESTING FRAMEWORKS #
+JUnit
+- creation and automation of test cases with pass / fail
+- utilities for test setup, teardown, and assertions
+
+Mockito
+- create mocks and stubs
+- minimize dependency on external components
+
+# DEVELOPMENT PROCESS #
+1. add Maven dependencies for JUnit
+2. create test package
+3. create unit test
+4. run unit test
+
