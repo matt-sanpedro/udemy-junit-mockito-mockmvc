@@ -2,15 +2,3 @@
 .project
 .settings/
 target/
-/target/
-*/target/**
-**/META-INF/
-!.mvn/wrapper/maven-wrapper.jar
-
-## target folder at the top level of the project structue and paths and contents underneath it
-target/
-target/*
-
-## target folder at any level of the project structue
-**/target
-/target 
