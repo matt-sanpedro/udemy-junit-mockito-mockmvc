@@ -102,13 +102,13 @@ class DemoUtilsTest {
 
     }
 
-    // @DisplayName("Timeout")
-    // @Test
-    // void testTimeout() {
+    @DisplayName("Timeout")
+    @Test
+    void testTimeout() {
 
-    //     assertTimeoutPreemptively(Duration.ofSeconds(3), () -> { demoUtils.checkTimeout(); },
-    //             "Method should execute in 3 seconds");
-    // }
+        assertTimeoutPreemptively(Duration.ofSeconds(3), () -> { demoUtils.checkTimeout(); },
+                "Method should execute in 3 seconds");
+    }
 
 
 
