@@ -1,0 +1,13 @@
+# LIFECYCLE METHODS #
+Common operations:
+Before each test: create objects, set up test data
+    @BeforeEach
+After each test: release resources, clean up test data
+    @AfterEach
+
+Before all: executed only once, before all test methods (must be static)
+    example: getting database connections, connecting to servers
+    @BeforeAll
+After all: executed only once, after all test methods (must be static)
+    example: releasing database connections, disconnecting from servers
+    @AfterAll
