@@ -45,19 +45,19 @@ public class DemoUtilsTest {
         assertThat(output).contains("This is an info log message");
     }
     
-    @Test
     @DisplayName("Equals and Not Equals Test")
+    @Test
     void testEqualsAndNotEquals() {
         System.out.println("Running test: testEqualsAndNotEquals");
-        
+        log.info("This is an info message");
         // Check if the two integers equal
         assertEquals(6, demoUtils.add(2, 4), "2+4 must be 6");
         assertNotEquals(6, demoUtils.add(1, 9), "1+9 must not be 6");
         
     }
     
-    @Test
     @DisplayName("Null and Not Null Test")
+    @Test
     void testNullAndNotNull() {
         System.out.println("Running test: testNullAndNotNull");
         
