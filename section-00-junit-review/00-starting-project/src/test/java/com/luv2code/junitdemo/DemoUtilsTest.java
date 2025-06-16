@@ -19,6 +19,8 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertSame;
 import static org.junit.jupiter.api.Assertions.assertNotSame;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -84,6 +86,16 @@ public class DemoUtilsTest {
         assertNotSame(str1, "Mike Tyson", "Objects should NOT refer to the same object");
     }
 
+    @DisplayName("True and False Test")
+    @Test
+    void testTrueFalse() {
+        System.out.println("Running test: testTrueFalse");
+        
+        assertEquals(true, demoUtils.isGreater(10, 5), "10 should be greater than 5");
+        assertEquals(false, demoUtils.isGreater(5, 10), "5 should not be greater than 10");
+        assertTrue(demoUtils.isGreater(7, 5), "7 should be greater than 5");
+        assertFalse(demoUtils.isGreater(1, 5), "1 should not be greater than 5");
+    }
     /*
     @AfterEach
     void tearDownAfterEach() {
