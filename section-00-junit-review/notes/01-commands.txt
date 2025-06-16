@@ -1,0 +1,25 @@
+# LINUX COMMANDS USING MAVEN #
+Clean lifecycle phase, ensures clean slate, prevents potential issues from outdated/conflicting files:
+	mvn clean
+
+Install lifecycle phase, compiles project, runs tests, packages code in distributable format (JAR / WAR),
+then copies the resulting package into local Maven repository (~/.m2/repository):
+	mvn install
+
+To streamline both lifecyles, can execute command:
+	mvn clean installl
+
+To rerun the tests, can also execute command:
+	mvn test
+
+In order to make use of the Maven tests, must ensure project contains surefire dependency in pom.xml:
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.5.3</version>
+            </plugin>
+        </plugins>
+    </build>
+
