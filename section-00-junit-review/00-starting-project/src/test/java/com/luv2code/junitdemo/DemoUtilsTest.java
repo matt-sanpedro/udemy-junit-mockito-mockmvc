@@ -3,6 +3,9 @@ import com.luv2code.junitdemo.DemoUtils;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.AfterAll;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
@@ -25,6 +28,16 @@ public class DemoUtilsTest {
     @AfterEach
     void tearDownAfterEach() {
         System.out.println("@AfterEach: executes after each test method");
+    }
+
+    @BeforeAll
+    static void setupBeforeEachClass() {
+        System.out.println("@BeforeAll: executes only once before all test methods");
+    }
+
+    @AfterAll
+    static void setupAfterEachClass() {
+        System.out.println("@AfterAll: executes only once after all test methods");
     }
 
     @Test
