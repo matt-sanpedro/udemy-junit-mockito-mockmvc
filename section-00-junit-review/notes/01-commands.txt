@@ -7,7 +7,7 @@ then copies the resulting package into local Maven repository (~/.m2/repository)
 	mvn install
 
 To streamline both lifecyles, can execute command:
-	mvn clean installl
+	mvn clean install
 
 To rerun the tests, can also execute command:
 	mvn test
@@ -22,4 +22,10 @@ In order to make use of the Maven tests, must ensure project contains surefire d
             </plugin>
         </plugins>
     </build>
+
+To run Maven sure-fire reports:
+	mvn site
+
+To view Maven dependencies
+	mvn dependency:tree
 
