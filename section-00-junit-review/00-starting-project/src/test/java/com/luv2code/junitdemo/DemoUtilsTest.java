@@ -17,6 +17,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertSame;
+import static org.junit.jupiter.api.Assertions.assertNotSame;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -66,6 +68,20 @@ public class DemoUtilsTest {
         
         assertNull(demoUtils.checkNull(str1), "String should be null");
         assertNotNull(demoUtils.checkNull(str2), "String should not be null");
+    }
+
+    @DisplayName("Same and Not Same")
+    @Test
+    void testSameAndNotSame() {
+        System.out.println("Running test: testSameAndNotSame");
+        
+        String str1 = demoUtils.getAcademy();
+        String str2 = demoUtils.getAcademyDuplicate();
+        
+        assertEquals(str1, str2, "Strings should be equal");
+        assertNotEquals(str1, "Luv2Code Academy 2", "Strings should not be equal");
+        assertSame(str1, str2, "Objects should refer to the same object");
+        assertNotSame(str1, "Mike Tyson", "Objects should NOT refer to the same object");
     }
 
     /*
