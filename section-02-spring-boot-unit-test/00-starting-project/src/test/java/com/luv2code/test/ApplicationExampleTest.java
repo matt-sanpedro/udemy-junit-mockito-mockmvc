@@ -1,9 +1,13 @@
 package com.luv2code.test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 import java.util.ArrayList;
 
 import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -52,5 +56,19 @@ public class ApplicationExampleTest {
     @Test
     void basicTest() {
         
+    }
+
+    @DisplayName("Add grade results for student grades")
+    @Test
+    public void addGradeResultsForStudentGrades() {
+        assertEquals(367.6, studentGrades.addGradeResultsForSingleClass(student.getStudentGrades().getMathGradeResults()), 
+            "The sum of the math grades should be 367.6");
+    }
+
+    @DisplayName("Add grade results for student grades not equal")
+    @Test
+    public void addGradeResultsForStudentGradesNotEquals() {
+        assertNotEquals(0, studentGrades.addGradeResultsForSingleClass(student.getStudentGrades().getMathGradeResults()), 
+            "The sum of the math grades should not be 0");
     }
 }
